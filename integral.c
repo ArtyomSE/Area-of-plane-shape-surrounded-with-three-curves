@@ -129,10 +129,10 @@ int main(int argc, char **argv) {
         printf("Абсолютная ошибка = %lf\n", answer - res);
         printf("Относительная ошибка = %lf\n", (answer - res) / res);
     }
- 
+
     return 0;
 }
- 
+
 double root(afunc *f, afunc *g, double a, double b, double eps1, afunc *f_, afunc *g_) {
     double Fa = f(a) - g(a), Fb = f(b) - g(b), Fab = f((a + b) / 2) - g((a + b) / 2);
     count = 0;
@@ -166,7 +166,7 @@ double root(afunc *f, afunc *g, double a, double b, double eps1, afunc *f_, afun
         return 0;
     }
 }
- 
+
 double integral(afunc *f, double a, double b, double eps2) {
     double n0 = 20, In, I2n = 0, h = (b - a) / n0, F, f_n;
     I2n += 0.5 * f(a);
